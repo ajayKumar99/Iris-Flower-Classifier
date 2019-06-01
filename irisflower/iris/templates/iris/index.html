@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>
+        Iris Flower Classifier
+    </title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">IRIS FLOWER CLASSIFIER</h1>
+    <form method="POST">
+        {% csrf_token %} {{ form }}
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+
+    <div class="images">
+        {% load static %}
+        <div class="im"><img src='{% static "iris/setosa.jpg" %}' /></div>
+        <div class="im"></div>
+        <div class="im"></div>
+    </div>
+
+    <h3>Predicted class of Iris Flower :</h3>
+
+    <h2>{{ predict }}</h2>
+</body>
+
+</html>
